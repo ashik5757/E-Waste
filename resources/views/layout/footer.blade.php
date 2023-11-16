@@ -3,8 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 footer-item">
-          <h4>Blog Website</h4>
-          <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
+          <h4>E-Waste</h4>
+          <p>
+            Engage with us on social media platforms to join a growing community dedicated to sustainable living. Share your experiences, tips, and success stories.
+
+          </p>
           <ul class="social-icons">
             <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -14,10 +17,10 @@
         <div class="col-md-3 footer-item">
           <h4>Useful Links</h4>
           <ul class="menu-list">
-            <li><a href="#">Vivamus ut tellus mi</a></li>
-            <li><a href="#">Nulla nec cursus elit</a></li>
-            <li><a href="#">Vulputate sed nec</a></li>
-            <li><a href="#">Cursus augue hasellus</a></li>
+            <li><a href="#">Government Waste Management Guidelines</a></li>
+            <li><a href="#">Local Recycling Centers</a></li>
+            <li><a href="#">Environmental Organizations</a></li>
+            <li><a href="#">Emergency Contacts</a></li>
           </ul>
         </div>
         <div class="col-md-3 footer-item">
@@ -67,8 +70,7 @@
       <div class="row">
         <div class="col-md-12">
           <p>
-              Copyright © 2020 Company Name
-              - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+              Copyright © 2023 E-Waste Management
           </p>
         </div>
       </div>

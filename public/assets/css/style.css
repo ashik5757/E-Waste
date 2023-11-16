@@ -94,6 +94,69 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
+  .card {
+	position: relative;
+	width: 300px;
+	height: 450px;
+	background-color: #f2f2f2;
+	color: black;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	perspective: 1000px;
+	box-shadow: 0 0 0 5px #ffffff;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card img{
+	width: 100%;
+	height: 100%;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: rgb(129, 248, 203);
+	transform: rotateX(-90deg);
+	transform-origin: bottom;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+	transform: rotateX(0deg);
+  }
+  
+  .card__title {
+	margin: 0;
+	font-size: 24px;
+	color: #000000;
+	font-weight: 700;
+  }
+  
+  .card:hover img{
+	scale: 0;
+  }
+  
+  .card__description {
+	margin: 10px 0 0;
+	font-size: 14px;
+	color: #272626;
+	line-height: 1.4;
+  }
+  
 
 
 
@@ -110,7 +173,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 a.filled-button {
-	background-color: #a4c639;
+	background-color: rgb(65, 255, 144);
 	color: #fff;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -123,7 +186,7 @@ a.filled-button {
 
 a.filled-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(65, 255, 144);
 }
 
 a.border-button {
@@ -796,7 +859,7 @@ ul.slick-dots {
     
 }
 .ser1, .ser2{
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -913,7 +976,7 @@ ul.slick-dots {
 
 .fun-facts {
 	margin-top: 140px;
-	background-image: url(../images/about-fullscreen-image-1-1920x600.jpg);
+	background-image: url(https://assets.weforum.org/article/image/TvkoCLbKRndiqAhBGDBlSFyYU80XzMq5fQbhS1aZuhs.JPG);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -956,7 +1019,7 @@ ul.slick-dots {
 
 .fun-facts em {
 	font-style: normal;
-	color: #a4c639;
+	color: #56f6b9;
 }
 
 .fun-facts p {
@@ -993,7 +1056,8 @@ ul.slick-dots {
 /* More Info */
 
 .more-info {
-	margin-top: 140px;
+	margin-top: 50px;
+	margin-bottom: 140px;
 }
 
 .more-info .left-image img {
@@ -1035,7 +1099,7 @@ ul.slick-dots {
 
 .more-info .right-content em {
 	font-style: normal;
-	color: #a4c639;
+	color: #39c684;
 }
 
 .more-info .right-content p {
@@ -1185,11 +1249,11 @@ ul.slick-dots {
 
 .callback-form .contact-form button.border-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(65, 255, 144);
 }
 
 .contact-us .contact-form button.filled-button {
-	background-color: #a4c639;
+	background-color: rgb(65, 255, 144);
 	color: #fff;
 	border: none;
 	font-size: 13px;
@@ -1207,7 +1271,7 @@ ul.slick-dots {
 
 .contact-us .contact-form button.filled-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(65, 255, 144);
 }
 
 
@@ -1281,7 +1345,7 @@ footer ul.social-icons li a {
 }
 
 footer ul.social-icons li a:hover {
-	background-color: #a4c639;
+	background-color: #5ac1a2;
 }
 
 footer ul.menu-list li {
@@ -1299,7 +1363,7 @@ footer ul.menu-list li a {
 }
 
 footer ul.menu-list li a:hover {
-	color: #a4c639;
+	color: rgb(65, 255, 144);
 }
 
 footer .contact-form input {
@@ -1360,7 +1424,7 @@ footer .contact-form ::placeholder {
 footer .contact-form button.filled-button {
 	background-color: transparent;
 	color: #fff;
-	background-color: #a4c639;
+	background-color: rgb(65, 255, 144);
 	border: none;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -1377,7 +1441,7 @@ footer .contact-form button.filled-button {
 
 footer .contact-form button.filled-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(65, 255, 144);
 }
 
 
@@ -1506,7 +1570,7 @@ footer .contact-form button.filled-button:hover {
 	width: 100%;
 	padding: 20px;
 	display: inline-block;
-	background-color: #a4c639;
+	background-color: #56f6b9;
   	font-size: 18px;
   	color: #121212;
   	letter-spacing: 0.5px;
@@ -1534,9 +1598,10 @@ footer .contact-form button.filled-button:hover {
   text-align: left;
   display: inline-block;
   transition: all 0.3s;
+  width: 650px;
 }
 .tabs-content img {
-	max-width: 100%;
+	max-width: 650px;
 	overflow: hidden;
 }
 .tabs-content h4 {

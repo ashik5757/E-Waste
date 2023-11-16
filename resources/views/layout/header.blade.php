@@ -36,9 +36,9 @@
       <div class="row ">
         <div class="col-sm-8 text-sm ">
           <div class="site-info ">
-            <a href="#" style="font-weight: bold; color: rgba(155, 159, 176, 0.767);"><span class="mai-call "></span> +880 199 0000000</a>
+            <a href="#" style="font-size:smaller; font-weight: bold; color: rgba(155, 159, 176, 0.767);"><span class="mai-call "></span> +880 199 0000000</a>
             <span class="divider">|</span>
-            <a href="#" style="font-weight: bold;color: rgba(155, 159, 176, 0.795);"><span class="mai-mail"></span> - E.Waste.@example.com</a>
+            <a href="#" style="font-size:smaller; font-weight: bold;color: rgba(155, 159, 176, 0.795);"><span class="mai-mail"></span> e.waste@gmail.com</a>
           </div>
         </div>
         <div class="col-sm-4 text-right text-sm">
@@ -65,23 +65,23 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
+              <a class="nav-link" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="#">Blog</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="#">Community</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="team.html">Authors</a>
+              <a class="nav-link" href="#">Resources</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
               <a style="background: rgb(65, 255, 144); color: rgb(0, 0, 0);font-size: 17px; margin-right: -30px" class="btn btn-info ml-lg-3" data-bs-toggle="modal" data-bs-target="#exampleModal" href="login.php">Login</a>
