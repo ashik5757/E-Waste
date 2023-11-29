@@ -5,15 +5,12 @@
 
 @section('more_link')
 
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
 <!-- Additional CSS Files -->
-<link rel="stylesheet" href="assets/css/fontawesome.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/owl.css">
 
 
-<script src="https://kit.fontawesome.com/c0a4fd738d.js" crossorigin="anonymous"></script>
+
 
 
 
@@ -24,6 +21,7 @@
 @section('content')
     
 <!-- Page Content -->
+
     <!-- Banner Starts Here -->
     <div class="main-banner header-text" id="top">
         <div class="Modern-Slider">
@@ -93,7 +91,6 @@
 
 
 
-</section>
 
 <div class="text-center mt-5" id="about_list">
           
@@ -383,15 +380,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
 
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/accordions.js"></script>
 
     <script language = "text/Javascript"> 
         cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
@@ -440,9 +429,20 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
     </script>
 
 
-<script src="assets/js/jquery-3.5.1.min.js"></script>
-<script src="assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
-<script src="assets/js/theme.js"></script>
+    {{-- <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/js/theme.js"></script> --}}
 
 @endsection
 
