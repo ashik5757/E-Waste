@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use Illuminate\Auth\AuthManager;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,11 +25,35 @@ Route::get('/about', function()  {
 })->name('about');
 
 
+
+// Blogsite
+
 Route::get('/blog', function() {
     return view('blog.blogsite');
 })->name('blog');
 
 
+
+
+//Auth
+
+// Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+
+Route::post('/signup', [AuthController::class, 'store'])->name('signup');
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/resorces', function() {
     return view('resources');
 })->name('resources');
+
+
+

@@ -8,9 +8,10 @@
                 <h1>Signup</h1>
 
 
-                <form id="submitForm_signup_1" action="{%url 'sign_up_landlord' %}" method="post"
+                <form id="submitForm_signup_1" action="{{route('signup')}}" method="post"
                     class="row g-3 needs-validation-l" novalidate>
                     
+                    @csrf
 
                     <div class="row g-2">
                         <div class="col form-floating mb-3">
@@ -87,9 +88,9 @@
                         </div>
 
                         <div class="col form-floating mb-3">
-                            <input type="password" class="form-control" required="" id="confirmpassword" name="confirmpassword"
+                            <input type="password" class="form-control" required="" id="password_confirmation" name="password_confirmation"
                                 placeholder="password" maxlength="15" value="" required>
-                            <label class="floatingInput" for="confirmpassword">Confirm Password</label>
+                            <label class="floatingInput" for="password_confirmation">Confirm Password</label>
                             <div class="invalid-feedback">
                                 Invalid Password (Must be same)
                             </div>
