@@ -4,11 +4,13 @@
         <div class="row">
             <div class="col mx-auto">
                     <h2>Login</h2>
-                    <form id="submitForm" action="{%url 'sign_in' %}" method="post" class="row g-3 needs-validation" novalidate>
+                    <form id="submitForm" action="{{route('signin')}}" method="post" class="row g-3 needs-validation" novalidate>
+
+                        @csrf
 
                         <div class="form-group required">
                             <lSabel for="username">Username / Email</lSabel>
-                            <input type="text" class="form-control text-lowercase" id="username" name="username_email" minlength="5"  value="" required>
+                            <input type="email" class="form-control text-lowercase" id="username" name="email" minlength="5"  value="" required>
                             
                             <div class="invalid-feedback">
                                 Invalid Username or Email.
@@ -40,12 +42,12 @@
                     </p>
                     <p class="small-xl pt-3 text-center">
                         <span class="text-muted">Not a member?</span>
-                        <a class="sign-up-link" data-bs-toggle="modal" data-bs-target="#signupModal_base" href="{% url 'signup_base' %}">Sign up</a>
+                        <a class="sign-up-link" data-bs-toggle="modal" data-bs-target="#signupModal_base" href="{{route('signup')}}">Sign up</a>
                     </p>
                     
                     <p class="small-xl text-center">
                         <span class="text-muted">Login as an </span>
-                        <a class="admin-link" href="{% url 'admin:index' %}">Admin</a>
+                        <a class="admin-link" href="">Admin</a>
                     </p>
             </div>
         </div>

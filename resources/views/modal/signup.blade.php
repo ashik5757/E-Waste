@@ -34,7 +34,7 @@
 
                     <div class="row g-2">
                         <div class="col form-floating mb-3">
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone (Ex:01XXXXXXXXX)" pattern="^\d{11}$"
+                            <input type="text" class="form-control" id="phone" name="number" placeholder="Phone (Ex:01XXXXXXXXX)" pattern="^\d{11}$"
                                 value="" required>
                             <label for="phone">Phone</label>
                             <div class="invalid-feedback">

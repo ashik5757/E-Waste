@@ -40,6 +40,10 @@ Route::get('/blog', function() {
 // Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
 
 Route::post('/signup', [AuthController::class, 'store'])->name('signup');
+Route::post('/signin', [AuthController::class, 'authenticate'])->name('signin');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
 
 
 

@@ -64,13 +64,32 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ route('about')}}">About Us</a>
             </li>
-            <li class="nav-item">
-              <a style="background: rgb(65, 255, 144); color: rgb(0, 0, 0);font-size: 17px; margin-right: -30px" class="btn btn-info ml-lg-3" data-bs-toggle="modal" data-bs-target="#loginmodal" href="login.php">Login</a>
-            </li>
 
-            <li class="nav-item">
-              <a style="background: rgb(65, 255, 144); color: rgb(0, 0, 0);font-size: 17px;" class="btn btn-info ml-lg-3" data-bs-toggle="modal" data-bs-target="#signupmodal" href="login.php">Register</a>
-            </li>
+            @guest
+              <li class="nav-item">
+                <a style="background: rgb(65, 255, 144); color: rgb(0, 0, 0);font-size: 17px; margin-right: -30px" class="btn btn-info ml-lg-3" data-bs-toggle="modal" data-bs-target="#loginmodal" href="login.php">Login</a>
+              </li>
+
+              <li class="nav-item">
+                <a style="background: rgb(65, 255, 144); color: rgb(0, 0, 0);font-size: 17px;" class="btn btn-info ml-lg-3" data-bs-toggle="modal" data-bs-target="#signupmodal" href="login.php">Register</a>
+              </li>
+            @endguest
+
+            @auth
+              <li class="nav-item">
+                <a>{{Auth::User()->username}}</a>
+              </li>
+
+              <li class="nav-item">
+                <a style="background: rgb(65, 255, 144); color: rgb(0, 0, 0);font-size: 17px;" class="btn btn-info ml-lg-3" href="{{route('logout')}}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                      @csrf
+                  </form>
+
+              </li>
+            @endauth
+
 
           </ul>
         </div>

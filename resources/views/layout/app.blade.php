@@ -14,18 +14,18 @@
     <link rel="stylesheet" href="{{ asset('assets/css/modal_sign.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/alert.css')}}">
 
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+
 
     {{-- <link rel="stylesheet" href="assets/css/owl.css"> --}}
     <script src="https://kit.fontawesome.com/c0a4fd738d.js" crossorigin="anonymous"></script>
 
-
-
-
-
-
-    
 
     @yield('more_link')
 
@@ -37,12 +37,10 @@
 <body>
 
 
-
-
-
-
     @include('layout.header')
+    @include('alert.success')
 
+    
 
     @yield('content')
     

@@ -11,23 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profile', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('number');
-            $table->string('occupation');
+            $table->string('occupation')->nullable();
             $table->string('area');
             $table->timestamps();
 
 
-            // $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
 
-            $table->foreignId('user_id')->unique() ->constrained(
-                table:'users', indexName:'profile_users_id'
-            )->onDelete('cascade');
+            // $table->foreignId('user_id')->unique() ->constrained(
+            //     table:'users', indexName:'profile_users_id'
+            // )->onDelete('cascade');
 
         });
     }
