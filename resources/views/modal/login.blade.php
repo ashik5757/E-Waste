@@ -42,7 +42,7 @@
                     </p>
                     <p class="small-xl pt-3 text-center">
                         <span class="text-muted">Not a member?</span>
-                        <a class="sign-up-link" data-bs-toggle="modal" data-bs-target="#signupModal_base" href="{{route('signup')}}">Sign up</a>
+                        <a class="sign-up-link" data-bs-toggle="modal" data-bs-target="#signupmodal" href="login.php">Sign up</a>
                     </p>
                     
                     <p class="small-xl text-center">
@@ -53,6 +53,14 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
 
 
 <script>

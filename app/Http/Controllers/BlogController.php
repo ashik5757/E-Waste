@@ -23,4 +23,13 @@ class BlogController extends Controller
 
         
     }
+
+
+    public function details(string $slug) {
+
+
+        return view('blog.details');
+
+        
+    }
 }

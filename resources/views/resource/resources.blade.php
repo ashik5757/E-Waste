@@ -7,7 +7,7 @@
 
 
 @section('more_link')
-    
+    {{-- css link here --}}
 @endsection
 
 

@@ -194,7 +194,7 @@ According to a 2018 Department of Environment (DoE) projection, e-wastes are inc
                     {{Str::of($str)->limit(300);}}
                   </p>
                   <div class="text-center">
-                    <a href="blog.html" class="filled-button">Read More</a>
+                    <a href="{{route('blog')}}" class="filled-button">Read More</a>
                   </div>
                 </article>
                 <article id='tabs-2'>
@@ -217,7 +217,7 @@ It is estimated that this amount of e-waste could fill up a football field six t
                 </p>
                   </p>
                     <div class="text-center">
-                        <a href="blog.html" class="filled-button">Read More</a>
+                        <a href="{{route('blog')}}" class="filled-button">Read More</a>
                     </div>
                 </article>
 
@@ -249,7 +249,7 @@ Wondering how you can contribute? Keep an eye out for upcoming events, workshops
                     {{Str::of($str)->limit(300);}}
                   </p>
                   <div class="text-center">
-                    <a href="blog.html" class="filled-button">Read More</a>
+                    <a href="{{route('blog')}}" class="filled-button">Read More</a>
                   </div>
                 </article>
 
@@ -270,7 +270,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
                       {{Str::of($str)->limit(300);}}
                     </p>
                     <div class="text-center">
-                      <a href="blog.html" class="filled-button">Read More</a>
+                      <a href="{{route('blog')}}" class="filled-button">Read More</a>
                     </div>
                   </article>
 
@@ -312,7 +312,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
               <p class="card__description"> 
                 {{Str::of($str)->limit(300);}}
                 <div class="text-center">
-                    <a href="#" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
+                    <a href="{{route('resources')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
                 </div>
               </p>
             </div>
@@ -332,7 +332,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
               <p class="card__description"> 
                 {{Str::of($str)->limit(300);}}
                 <div class="text-center">
-                    <a href="#" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
+                    <a href="{{route('resources')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
                 </div>
               </p>
             </div>

@@ -33,6 +33,8 @@ Route::get('/about', function()  {
 
 Route::get('/blog', [BlogController::class, 'blogsite'])->name('blog')->middleware('c.auth');
 Route::post('/blog-create', [BlogController::class, 'store'])->name('blog.store')->middleware('c.auth');
+Route::get('/blog-details/{slug}', [BlogController::class, 'details'])->name('blog.details')->middleware('c.auth');
+
 
 
 
