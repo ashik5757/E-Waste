@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResourceController;
 use Illuminate\Auth\AuthManager;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +31,9 @@ Route::get('/about', function()  {
 
 // Blogsite
 
-Route::get('/blog', function() {
-    return view('blog.blogsite');
-})->name('blog');
+Route::get('/blog', [BlogController::class, 'blogsite'])->name('blog')->middleware('c.auth');
+Route::post('/blog-create', [BlogController::class, 'store'])->name('blog.store')->middleware('c.auth');
+
 
 
 
@@ -47,17 +50,16 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 
+//Profile
+
+Route::get('profile/{id}', [ProfileController::class, 'profile'])->name('profile')->middleware('c.auth');
 
 
 
 
 
 
-
-
-Route::get('/resorces', function() {
-    return view('resources');
-})->name('resources');
+Route::get('/resources', [ResourceController::class, 'resources'])->name('resources')->middleware('c.auth');
 
 
 

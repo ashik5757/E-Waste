@@ -2,7 +2,7 @@
 
 
 @section('title')
-    E-Waste | Resources
+    E-Waste | #{{Auth::User()->username}}
 @endsection
 
 
@@ -18,7 +18,7 @@
 
     <div class="container home-con">
         <div class="half1">
-            <h3 class="mt-5" style="color: rgb(65, 255, 144);font-size: 60px;">Resources</h3>
+            <h3 class="mt-5" style="color: rgb(65, 255, 144);font-size: 60px;">Profile Page</h3>
             <h1 class="mt-5"> <br><span class="txt"></span></h1>
                 <p class="mt-4">  
                     

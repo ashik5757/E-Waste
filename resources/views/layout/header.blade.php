@@ -77,7 +77,7 @@
 
             @auth
               <li class="nav-item">
-                <a>{{Auth::User()->username}}</a>
+                <a class="nav-link" style="text-transform: none" href="{{route('profile', ['id'=>Auth::User()->id])}}">#{{Auth::User()->username}}</a>
               </li>
 
               <li class="nav-item">
@@ -99,7 +99,13 @@
 
 
 
-
+  @if(Session::get('show_login_modal'))
+    <script>
+        $(document).ready(function(){
+            $('#loginmodal').modal('show');
+        });
+    </script>
+  @endif
 
 
 

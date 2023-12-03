@@ -38,9 +38,9 @@
 
 
     @include('layout.header')
-    @include('alert.success')
-
+    @include('alert.alert')
     
+
 
     @yield('content')
     

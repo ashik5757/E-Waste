@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('resources', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('description');
@@ -20,15 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
-            // $table->unsignedBigInteger('user_id');
-
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            
-
-            // $table->foreignId('user_id')->unique()->constrained(
-            //     table:'users', indexName:'blog_users_id'
-            // )->onDelete('cascade');
-
 
         });
     }
@@ -38,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blog');
+        Schema::dropIfExists('resources');
     }
 };

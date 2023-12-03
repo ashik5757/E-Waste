@@ -7,7 +7,7 @@
 
 
 @section('more_link')
-    
+    <link rel="stylesheet" href="{{ asset('assets/css/blogsite.css') }}">
 @endsection
 
 
@@ -24,15 +24,125 @@
                     
                     
                 </p>
-            <input type="button" value="Discover Now" class="button_uv1">
+
+
+
+            <input type="button" value="Create Now" class="button_uv1">
         </div>
-
-
     </div>
 
-
+    
 
 </div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Your create blog form goes here -->
+            <form method="post" action="">
+                @csrf
+                
+                        <div class="form-container">
+                    
+                            <form class="form" action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
+                                @csrf
+                            <div class="form-group">
+                                <label for="title">Title</label><br>
+                                <input required="" name="title" id="title" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label><br>
+                                <textarea required="" cols="50" rows="5" id="textarea" name="description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="details">Details</label><br>
+                                <textarea required="" cols="50" rows="10" id="textarea" name="details"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category">Category</label><br>
+                                <select name="category" id="category">
+                                    <option value="blog">Blog Post</option>
+                                    <option value="product">Product Post</option>
+                                    <option value="resource">Resource Post</option>
+                                </select>
+                            </div>
+                    
+                            <label for="image" class="custum-file-upload"><br>
+                                <div class="icon">
+                                
+                                </div>
+                                <div class="text">
+                                <span>Click to upload image</span>
+                                </div>
+                                <input id="image" name="image" type="file" accept="image/*" onchange="previewImage(event)">
+                            </label>
+                            <div id="imagePreviewContainer">
+                                <img id="imagePreview" alt="Image Preview" style="max-width: 100%; max-height: 200px;">
+                            </div>
+                    
+                    
+                            <button type="submit" class="form-submit-btn">Submit</button>
+                            </form>
+                    
+                    
+                        </div>
+                    
+
+                       
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            @for ($i = 0; $i < 10; $i++)
+            <div class="card mb-3" style="width: 600px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="..." class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text"><small class="text-body-secondary">Created 3 mins ago</small></p>
+
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            @endfor
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    function previewImage(event) {
+        var input = event.target;
+        
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var imagePreview = document.getElementById('imagePreview');
+                imagePreview.src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+
 
 
 @endsection
