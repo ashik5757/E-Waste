@@ -1,17 +1,20 @@
 
-<div class="pt-2 mx-4">
-    <div class="container">
+<div class="pt-2 mx-4" style="margin: auto;">
+    <div class="container" style="background:#eee;padding-left:25px;padding-right:25px;padding-bottom:40px
+    width:98%">
         <div class="row">
             <div class="col mx-auto">
-                    <h2>Login</h2>
+                <span class="mt-5" style="color: rgb(47,155,92); font-size: 50px; font-weight: bold;">E-Waste </span>
+                <h2>Login</h2><br>
+
                     <form id="submitForm" action="{{route('signin')}}" method="post" class="row g-3 needs-validation" novalidate>
 
                         @csrf
 
                         <div class="form-group required">
-                            <lSabel for="username">Username / Email</lSabel>
+                            <label for="username">Username / Email</label>
                             <input type="email" class="form-control text-lowercase" id="username" name="email" minlength="5"  value="" required>
-                            
+
                             <div class="invalid-feedback">
                                 Invalid Username or Email.
                             </div>
@@ -34,7 +37,7 @@
                             </div>
                         </div>
                         <div class="form-group pt-1">
-                            <button class="btn btn-login-custom btn-block" style="width:100%" type="submit" >Log In</button>
+                            <button class="btn btn-login-custom btn-block" style="width:100%;background: rgb(47,155,92);color:azure" type="submit" >Log In</button>
                         </div>
                     </form>
                     <p class="small-xl pt-3 text-center">
@@ -44,7 +47,7 @@
                         <span class="text-muted">Not a member?</span>
                         <a class="sign-up-link" data-bs-toggle="modal" data-bs-target="#signupmodal" href="login.php">Sign up</a>
                     </p>
-                    
+
                     <p class="small-xl text-center">
                         <span class="text-muted">Login as an </span>
                         <a class="admin-link" href="">Admin</a>
@@ -66,10 +69,10 @@
 <script>
     (() => {
         'use strict'
-      
+
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         const forms = document.querySelectorAll('.needs-validation')
-      
+
         // Loop over them and prevent submission
         Array.from(forms).forEach(form => {
           form.addEventListener('submit', event => {
@@ -77,7 +80,7 @@
               event.preventDefault()
               event.stopPropagation()
             }
-      
+
             form.classList.add('was-validated')
           }, false)
         })
