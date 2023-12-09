@@ -3,7 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\ResourceController;
 use Illuminate\Auth\AuthManager;
 use Illuminate\Support\Facades\Route;
 
@@ -64,9 +64,11 @@ Route::get('profile/{id}', [ProfileController::class, 'profile'])->name('profile
 
 
 
-Route::get('/resources', [FeatureController::class, 'resources'])->name('resources')->middleware('c.auth');
-Route::get('/feature.create', [FeatureController::class, 'create'])->name('feature.create')->middleware('c.auth');
-Route::post('/feature.create', [FeatureController::class, 'store'])->name('feature.create')->middleware('c.auth');
+Route::get('/resources', [ResourceController::class, 'feature'])->name('resources')->middleware('c.auth');
+Route::get('/feature/create', [ResourceController::class, 'create'])->name('feature.create')->middleware('c.auth');
+Route::post('/feature/create', [ResourceController::class, 'create'])->name('feature.create')->middleware('c.auth');
+Route::get('/feature-details/{slug}', [ResourceController::class, 'details'])->name('feature.details')->middleware('c.auth');
+
 
 
 

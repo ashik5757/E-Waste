@@ -38,7 +38,7 @@
         <h4>Subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
         <h4>Author:</h4>
         <h4>Published date:</h4>
-        <h4>Author:</h4>
+        <h4>Category:</h4>
 
       </div>
 

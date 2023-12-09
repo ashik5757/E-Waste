@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FeatureController extends Controller
+class ResourceController extends Controller
 {
-    public function resources() {
-        return view('resource.resources');
+    public function feature() {
+        return view('feature.feature');
     }
     public function create() {
-        return view('resource.addfeature');
+        return view('feature.addfeature');
+    }
+    public function details() {
+        return view('feature.details');
     }
     public function store() {
 
@@ -24,4 +27,6 @@ class FeatureController extends Controller
 //     return redirect('/');
 
     }
+
+
 }
