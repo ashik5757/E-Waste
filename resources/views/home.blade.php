@@ -76,7 +76,7 @@
                             style="font-size: 20px">
                                 E-waste, short for electronic waste, refers to discarded electronic devices and equipment that have reached the end of their useful life or are no longer in use. These items contain various hazardous materials and substances, making their disposal and recycling important for environmental and human health reasons. E-waste can come from both personal and business sources and includes a wide range of electronic and electrical items
                             </p>
-                        <input type="button" value="Discover Now" class="button_uv1" sty>
+                        <input type="button" value="Discover Now" class="button_uv1">
                     </div>
 
                     <div class="half2"

@@ -1,0 +1,9 @@
+label, input, textarea,select, span{
+    max-width: 700px;
+}
+label{
+   font-weight: bold;
+   font-size: 18px;
+   margin-left: 5px;
+
+}
