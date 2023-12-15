@@ -32,7 +32,9 @@ Route::get('/about', function()  {
 // Blogsite
 
 Route::get('/blog', [BlogController::class, 'blogsite'])->name('blog')->middleware('c.auth');
-Route::post('/blog-create', [BlogController::class, 'store'])->name('blog.store')->middleware('c.auth');
+
+Route::get('/blog-create', [BlogController::class, 'create'])->name('blog.create')->middleware('c.auth');
+Route::post('/blog-store', [BlogController::class, 'store'])->name('blog.store')->middleware('c.auth');
 Route::get('/blog-details/{slug}', [BlogController::class, 'details'])->name('blog.details')->middleware('c.auth');
 
 
@@ -61,7 +63,12 @@ Route::get('profile/{id}', [ProfileController::class, 'profile'])->name('profile
 
 
 
-Route::get('/resources', [ResourceController::class, 'resources'])->name('resources')->middleware('c.auth');
+
+Route::get('/resources', [ResourceController::class, 'feature'])->name('resources')->middleware('c.auth');
+Route::get('/feature/create', [ResourceController::class, 'create'])->name('feature.create')->middleware('c.auth');
+Route::post('/feature/create', [ResourceController::class, 'create'])->name('feature.create')->middleware('c.auth');
+Route::get('/feature-details/{slug}', [ResourceController::class, 'details'])->name('feature.details')->middleware('c.auth');
+
 
 
 

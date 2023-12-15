@@ -40,9 +40,8 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 15px 30px;
 	text-align: center;
 	font-size: 18px;
-	letter-spacing: 1px;
 	text-decoration: none;
-	color: #51bfc7;
+	color: rgb(47,155,92);
 	background: transparent;
 	cursor: pointer;
 	transition: ease-out 0.5s;
@@ -50,12 +49,13 @@ h1,h2,h3,h4,h5,h6 {
 	border-radius: 10px;
 	box-shadow: inset 0 0 0 0 #51bfc7;
   }
-  
+
   .button_uv1:hover {
-	color: white;
-	box-shadow: inset 0 -100px 0 0 rgb(29, 27, 53)
+    color: white;
+	background: rgb(118, 199, 107);
+	box-shadow: inset 0 -100px 0 0 rgb(118, 199, 107)
   }
-  
+
   .button_uv1:active {
 	transform: scale(0.9);
   }
@@ -82,12 +82,12 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: bolder;
 	color: black;
   }
-  
+
   .card_blog:hover {
 	border: 1px solid black;
 	transform: scale(1.05);
   }
-  
+
   .card_blog:active {
 	transform: scale(0.95) rotateZ(1.7deg);
   }
@@ -109,18 +109,18 @@ h1,h2,h3,h4,h5,h6 {
 	box-shadow: 0 0 0 5px #ffffff;
 	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .card img{
 	width: 100%;
 	height: 100%;
 	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .card:hover {
 	transform: scale(1.05);
 	box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
   }
-  
+
   .card__content {
 	position: absolute;
 	top: 0;
@@ -134,29 +134,29 @@ h1,h2,h3,h4,h5,h6 {
 	transform-origin: bottom;
 	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .card:hover .card__content {
 	transform: rotateX(0deg);
   }
-  
+
   .card__title {
 	margin: 0;
 	font-size: 24px;
 	color: #000000;
 	font-weight: 700;
   }
-  
+
   .card:hover img{
 	scale: 0;
   }
-  
+
   .card__description {
 	margin: 10px 0 0;
 	font-size: 14px;
 	color: #272626;
 	line-height: 1.4;
   }
-  
+
 
 
 
@@ -204,7 +204,7 @@ a.border-button {
 
 a.border-button:hover {
 	background-color: #fff;
-	color: #39c674;
+	color: rgb(47,155,92);
 }
 
 .section-heading {
@@ -215,12 +215,12 @@ a.border-button:hover {
 .section-heading h2 {
 	font-size: 36px;
 	font-weight: 600;
-	color: #1e1e1e;
+	color: rgb(47,155,92);
 }
 
 .section-heading em {
 	font-style: normal;
-	color: #39c684;
+	color: rgb(47,155,92);
 }
 
 .section-heading span {
@@ -375,39 +375,39 @@ a.border-button:hover {
 	border-bottom: 0.5px solid #bdd6ca;
 	background-color: #dffbed;
   }
-  
+
   .topbar .row {
 	align-items: center;
 	min-height: 36px;
   }
-  
+
   .topbar .site-info a {
 	display: inline-flex;
 	align-items: center;
 	color: #A1AAA7;
   }
-  
+
   .topbar .site-info a:hover {
 	text-decoration: none;
   }
-  
+
   .topbar .site-info a span {
 	font-size: 16px;
 	margin-right: 6px;
   }
-  
+
   .topbar .site-info .divider {
 	margin-left: 8px;
 	margin-right: 8px;
 	color: #BEC8B8;
   }
-  
+
   .topbar .social-mini-button a {
 	display: inline-block;
 	padding: 4px 8px;
 	color: #A1AAA7;
   }
-  
+
   .topbar .social-mini-button a:hover {
 	text-decoration: none;
 	color: #6E807A;
@@ -440,7 +440,7 @@ header .navbar {
 	min-height: 100px;
 }
 .background-header .navbar-brand h2 {
-	color: rgb(65, 255, 144) !important;
+	color: rgb(47,155,92) !important;
 }
 .background-header .navbar-nav a.nav-link {
 	color: #1e1e1e!important;
@@ -451,7 +451,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: rgb(65, 255, 144)!important;
+	color: rgb(47,155,92)!important;
 	font-weight: bolder;
 }
 .navbar .navbar-brand {
@@ -496,15 +496,15 @@ header .navbar {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
-	color: rgb(65, 255, 144);
-	border-bottom: 3px solid rgb(65, 255, 144);
+	color: rgb(47,155,92);
+	border-bottom: 3px solid rgb(47,155,92);
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
 }
 .navbar .navbar-toggler {
 	border-color: #fff;
-	background-color: #fff;	
+	background-color: #fff;
 	height: 36px;
 	outline: none;
 	border-radius: 0px;
@@ -514,7 +514,7 @@ header .navbar {
 }
 .navbar .navbar-toggler-icon:after {
 	content: '\f0c9';
-	color: rgb(65, 255, 144);
+	color: rgb(47,155,92);
 	font-size: 18px;
 	line-height: 26px;
 	font-family: 'FontAwesome';
@@ -641,7 +641,7 @@ header .navbar {
 	flex: 1;
 	margin-top: 220px;
 
-	
+
 }
 .half2 img{
     width: 600px;
@@ -686,6 +686,7 @@ header .navbar {
     font-size: 37px;
     width: 1000px;
     text-transform: uppercase;
+
 }
 .half1 p{
     position: relative;
@@ -698,14 +699,15 @@ header .navbar {
     position: relative;
     top:-80px;
     left: -3px;
-    padding:12px 25px;
+    padding:10px 20px;
     outline: none;
-    color: rgba(5, 5, 5, 0.801);
+    color: rgba(255, 255, 255);
     border: 1px solid #a2e1e5;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 20px;
+    font-family: Garamond, serif;
+    font-weight:bold;
     border-radius: 20% 20% 20% 20% / 90% 90% 90% 90%;
-    background: #56f6b9;
+    background: rgb(47,155,92);
 }
 .half1 input:hover{
     padding:13px 26px;
@@ -726,7 +728,7 @@ header .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
- 
+
 
 }
 
@@ -856,7 +858,7 @@ ul.slick-dots {
 .serhover:hover{
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
     cursor: pointer;
-    
+
 }
 .ser1, .ser2{
     width: 100%;
@@ -866,7 +868,7 @@ ul.slick-dots {
     align-items: center;
     text-align: center;
     padding:40px 81px;
-    
+
 
 }
 .ser1 div, .ser2 div{
@@ -874,7 +876,7 @@ ul.slick-dots {
     float: left;
     padding: 5px;
     margin: 0 auto;
-    
+
 }
 
 
@@ -1120,7 +1122,7 @@ ul.slick-dots {
 }
 .testimonial-item .inner-content {
 	text-align: center;
-	background-color: #fff;	
+	background-color: #fff;
 	padding: 30px;
 	border-radius: 5px;
 }
@@ -1612,7 +1614,7 @@ footer .contact-form button.filled-button:hover {
 	margin-top: 30px;
 }
 .tabs-content h4 a {
-	color: inherit;	
+	color: inherit;
 }
 .tabs-content p {
   font-size: 14px;
@@ -1620,7 +1622,7 @@ footer .contact-form button.filled-button:hover {
   margin-bottom: 0px;
 }
 
-.dropdown-item.active, 
+.dropdown-item.active,
 .dropdown-item:active {
 	background-color: #a4c639;
 }
@@ -1775,5 +1777,5 @@ footer .contact-form button.filled-button:hover {
 	}
 }
 
-h5 a { color: #a4c639; } 
-h5 a:hover { color: inherit; } 
+h5 a { color: #a4c639; }
+h5 a:hover { color: inherit; }

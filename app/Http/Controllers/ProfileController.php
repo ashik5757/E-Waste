@@ -9,4 +9,12 @@ class ProfileController extends Controller
     public function profile(string $id){
         return view('profile.profile');
     }
+    public function create(string $id){
+        return view('profile.profile');
+    }
+    public function store(string $id){
+        return view('profile.profile');
+    }
 }
+
+

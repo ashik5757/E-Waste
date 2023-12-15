@@ -18,108 +18,56 @@
 
     <div class="container home-con">
         <div class="half1">
-            <h3 class="mt-5" style="color: rgb(65, 255, 144);font-size: 60px;">Blog Site</h3>
-            <h1 class="mt-5"> <br><span class="txt"></span></h1>
-                <p class="mt-4">  
-                    
-                    
-                </p>
+            <h3 style="color: rgb(47,155,92);font-size: 60px;">Blog Site</h3>
+            <span class="txt mt-3">Exploring the World Through Words</span>
+            <h3 class="mt-3">You can Blog post on you own!!</h3>
 
-
-
-            <input type="button" value="Create Now" class="button_uv1">
+            <a href="{{route('blog.create', ['slug'=>Str::slug('Card title')])}}">
+                <input style="margin-top: 100px" type="button" value="Create Now" class="button_uv1">
+            </a>
         </div>
     </div>
 
-    
+
 
 </div>
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <!-- Your create blog form goes here -->
-            <form method="post" action="">
-                @csrf
-                
-                        <div class="form-container">
-                    
-                            <form class="form" action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
-                                @csrf
-                            <div class="form-group">
-                                <label for="title">Title</label><br>
-                                <input required="" name="title" id="title" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Description</label><br>
-                                <textarea required="" cols="50" rows="5" id="textarea" name="description"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="details">Details</label><br>
-                                <textarea required="" cols="50" rows="10" id="textarea" name="details"></textarea>
-                            </div>
+<div class="container" >
+    <div class="row justify-content-evenly"  >
 
-                            <div class="form-group">
-                                <label for="category">Category</label><br>
-                                <select name="category" id="category">
-                                    <option value="blog">Blog Post</option>
-                                    <option value="product">Product Post</option>
-                                    <option value="resource">Resource Post</option>
-                                </select>
+
+
+                @for ($i = 0; $i < 10; $i++)
+                <div class="col" style="margin-bottom: 70px">
+
+                    <div class="card" style="width: 1100px;background:#eee;">
+                        <a style="width: 800px;" href="{{route('blog.details', ['slug'=>Str::slug('Card title')])}}" >
+
+                        <div class="row align-items-start">
+                            <div class="col-md-4 ">
+                                <img src="/assets/images/demo.jpg" class="rounded" alt="..."  style="height: 350px;margin-top: 10px;">
                             </div>
-                    
-                            <label for="image" class="custum-file-upload"><br>
-                                <div class="icon">
-                                
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-subtitle"><small class="text-body-secondary">Created 3 mins ago</small></p>
+
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolorum adipisci magnam facilis, nam optio delectus reiciendis! Inventore dignissimos officiis aut illo nam dolore distinctio quae. Quis deleniti id incidunt dolorem, beatae cum quas molestiae sapiente temporibus aspernatur laborum eveniet error soluta voluptatem ratione at nemo maiores nisi dignissimos ullam aut ducimus dolor itaque accusamus. Ex eum animi rerum tenetur dignissimos incidunt maxime? Maxime veniam temporibus quasi culpa accusantium maiores nobis ut, tempora ipsum modi, nulla unde nisi labore sequi.
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                                 </div>
-                                <div class="text">
-                                <span>Click to upload image</span>
-                                </div>
-                                <input id="image" name="image[]" type="file" accept="image/*" onchange="previewImages(event)" multiple>
-                            </label>
-
-
-
-                            <div id="image-preview"></div>
-                    
-                    
-                            <button type="submit" class="form-submit-btn">Submit</button>
-                            </form>
-                    
-                    
+                            </div>
                         </div>
-                    
 
-                       
-            </form>
-        </div>
-
-        <div class="col-md-6">
-
-            @for ($i = 0; $i < 10; $i++)
-
-            <a href="{{route('blog.details', ['slug'=>Str::slug('Card title')])}}">
-                <div class="card mb-3" style="width: 600px;">
-                    <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text"><small class="text-body-secondary">Created 3 mins ago</small></p>
-
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+                     </a>
                     </div>
                 </div>
-            </a>
 
             @endfor
+
+
 
         </div>
     </div>
@@ -163,5 +111,5 @@
 
 
 @endsection
-    
+
 

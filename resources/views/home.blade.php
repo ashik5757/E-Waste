@@ -19,7 +19,7 @@
 
 
 @section('content')
-    
+
 <!-- Page Content -->
 
     <!-- Banner Starts Here -->
@@ -31,16 +31,16 @@
             <div class="item item-1">
                 <div class="container home-con">
                     <div class="half1">
-                        <h3 class="mt-5" style="color: rgb(65, 255, 144);font-size: 60px;">MINIMIZE WASTE 1</h3>
+                        <h3 class="mt-5" style="color: rgb(47,155,92);font-size: 60px;">MINIMIZE WASTE 1</h3>
                         <h1 class="mt-5"> <br><span class="txt"></span></h1>
-                            <p class="mt-4">  
-                                E-waste, short for electronic waste, refers to discarded electronic devices and equipment that have reached the end of their useful life or are no longer in use. These items contain various hazardous materials and substances, making their disposal and recycling important for environmental and human health reasons. E-waste can come from both personal and business sources and includes a wide range of electronic and electrical items 
+                            <p class="mt-4" style="font-size: 20px" >
+                                E-waste, short for electronic waste, refers to discarded electronic devices and equipment that have reached the end of their useful life or are no longer in use. These items contain various hazardous materials and substances, making their disposal and recycling important for environmental and human health reasons. E-waste can come from both personal and business sources and includes a wide range of electronic and electrical items
                             </p>
                         <input type="button" value="Discover Now" class="button_uv1">
                     </div>
 
-                    <div class="half2">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lfj8SKFlTpI?si=XqX2SyDHu5v9y1_h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="half2" style="margin-left: 100px">
+                        <iframe width="700" height="450" src="https://www.youtube.com/embed/Lfj8SKFlTpI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -50,16 +50,18 @@
             <div class="item item-2">
                 <div class="container home-con">
                     <div class="half1">
-                        <h3 class="mt-5" style="color: rgb(65, 255, 144);font-size: 60px;">MINIMIZE WASTE 2</h3>
+                        <h3 class="mt-5" style="color: rgb(47,155,92);font-size: 60px;">MINIMIZE WASTE 2</h3>
                         <h1 class="mt-5"> <br><span class="txt2"></span></h1>
-                            <p class="mt-4">  
-                                E-waste, short for electronic waste, refers to discarded electronic devices and equipment that have reached the end of their useful life or are no longer in use. These items contain various hazardous materials and substances, making their disposal and recycling important for environmental and human health reasons. E-waste can come from both personal and business sources and includes a wide range of electronic and electrical items 
+                            <p class="mt-4"
+                            style="font-size: 20px">
+                                E-waste, short for electronic waste, refers to discarded electronic devices and equipment that have reached the end of their useful life or are no longer in use. These items contain various hazardous materials and substances, making their disposal and recycling important for environmental and human health reasons. E-waste can come from both personal and business sources and includes a wide range of electronic and electrical items
                             </p>
                         <input type="button" value="Discover Now" class="button_uv1">
                     </div>
 
-                    <div class="half2">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/s4LZwCDaoQM?si=kS3iLt3B9QNFgI5n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="half2"
+                    style="margin-left: 100px">
+                        <iframe width="700" height="450" src="https://www.youtube.com/embed/s4LZwCDaoQM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -68,16 +70,18 @@
             <div class="item item-3">
                 <div class="container home-con">
                     <div class="half1">
-                        <h3 class="mt-5" style="color: rgb(65, 255, 144);font-size: 60px;">MINIMIZE WASTE 3</h3>
+                        <h3 class="mt-5" style="color: rgb(47,155,92);font-size: 60px;">MINIMIZE WASTE 3</h3>
                         <h1 class="mt-5"> <br><span class="txt3"></span></h1>
-                            <p class="mt-4">  
-                                E-waste, short for electronic waste, refers to discarded electronic devices and equipment that have reached the end of their useful life or are no longer in use. These items contain various hazardous materials and substances, making their disposal and recycling important for environmental and human health reasons. E-waste can come from both personal and business sources and includes a wide range of electronic and electrical items 
+                            <p class="mt-4"
+                            style="font-size: 20px">
+                                E-waste, short for electronic waste, refers to discarded electronic devices and equipment that have reached the end of their useful life or are no longer in use. These items contain various hazardous materials and substances, making their disposal and recycling important for environmental and human health reasons. E-waste can come from both personal and business sources and includes a wide range of electronic and electrical items
                             </p>
                         <input type="button" value="Discover Now" class="button_uv1">
                     </div>
 
-                    <div class="half2">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qyu-fZ8BOnI?si=ZcNYgnS50EUccJ5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="half2"
+                    style="margin-left: 100px">
+                        <iframe width="700" height="450" src="https://www.youtube.com/embed/Qyu-fZ8BOnI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -92,10 +96,10 @@
 
 
 
-<div class="text-center mt-5" id="about_list">
-          
-  <h1 style="color: rgb(65, 255, 144);font-weight: bold;font-size: 50px; margin-bottom:50px"> We transform education into action<br> for a sustainable, waste-free world.<br>
-    Join us.</h1>
+<div class="text-center mt-5"  id="about_list">
+  <h1 style="color: rgb(47,155,92);font-weight: bold;font-size: 50px; margin-bottom:50px">
+    <span style="font-size:50px;color:black"> We transform education into action</span><br> for a sustainable waste-free world.<br>
+    <span style="font-size:50px;color:black">Join us.</span></h1>
 
 </div>
 
@@ -105,15 +109,15 @@
     <div class="text-center" style="position: relative; ">
     <div class="ser1">
         <div class="serhover">
-            <i class="fa-solid fa-file" style="font-size: 50px;"></i>
+            <i class="fa-solid fa-book" style="font-size: 50px;"></i>
             <h1>Documentation</h1>
-            <p>Information on the management, recycling,<br> and disposal of e-waste </p>
+            <p>recording and managing information related<br>  to electronic waste, or waste. </p>
         </div>
         <div class="serhover">
             <i class="fa-solid fa-seedling"
             style="font-size: 50px;"></i>
             <h1>Nature</h1>
-            <p> Recycle organic and inorganic materials</p>
+            <p> Recycle several organic and inorganic materials. <br> Makes the nature better than previous</p>
         </div>
         <div class="serhover">
             <i class="fa-solid fa-sun-plant-wilt" style="font-size: 50px;"></i>
@@ -126,18 +130,18 @@
     <div class="ser2">
         <div class="serhover">
             <i class="fa-solid fa-users-rectangle" style="font-size: 50px;"></i>
-            <h1>Community Forum</h1>
-            <p>Join with us now!</p>
+            <h1>Community</h1>
+            <p>discuss, share information, and collaborate <br>on issues related to electronic waste</p>
         </div>
         <div class="serhover">
             <i class="fa-solid fa-location" style="font-size: 50px;"></i>
             <h1>Recycler Locator</h1>
-            <p>Locate the recycler for waste management</p>
+            <p>Locate the nearest place of <br>recycler for waste management</p>
         </div>
         <div class="serhover">
             <i class="fa-solid fa-person-chalkboard" style="font-size: 50px;"></i>
-            <h1>Instructor</h1>
-            <p>Job opportunity to make your carrier here. <br> Drop your CV now!</p>
+            <h1>Creativity</h1>
+            <p>Make new thing using waste <br> Drop your ideas now!</p>
         </div>
     </div>
 
@@ -155,7 +159,7 @@
             <h1 class="fw-bold">Our Recent Blog Post</h1>
         </div>
     </div>
-    
+
 
 
 
@@ -172,13 +176,13 @@
                 <li><a href='#tabs-3'>Latest partnerships in the quest for sustainable waste management solutions <br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
                 <li><a href='#tabs-4'>How technology transforming the landscape of waste management<br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
               </ul>
-  
+
               <br>
 
-  
+
               <br>
             </div>
-  
+
             <div class="col-md-8">
               <section class='tabs-content'>
                 <article id='tabs-1'>
@@ -188,13 +192,13 @@
                       $str = "As Bangladesh goes through a tech revolution with growing focus on the ICT sector, there looms the danger of improperly treated e-waste, which is projected to rise exponentially and become a potential threat to the environment and those handling the wastes.
 According to a 2018 Department of Environment (DoE) projection, e-wastes are increasing at a rate of 20% every year and by 2035 the total amount is likely to add up to around 4.62 million tons.";
                   @endphp
-                  
+
                   <p>
                     {{-- {{ str_limit($str, 50) }} --}}
                     {{Str::of($str)->limit(300);}}
                   </p>
                   <div class="text-center">
-                    <a href="{{route('blog')}}" class="filled-button">Read More</a>
+                    <a href="{{route('blog')}}" class="filled-button" style="margin-top: 20px">Read More</a>
                   </div>
                 </article>
                 <article id='tabs-2'>
@@ -210,14 +214,15 @@ The answer - most likely to a landfill or an incinerator.
 
 It is estimated that this amount of e-waste could fill up a football field six times over. This will only increase as the need for electronics continues to grow, which means more e-waste will be generated as well.";
                 @endphp
-                
+
                 <p>
                   {{-- {{ str_limit($str, 50) }} --}}
                   {{Str::of($str)->limit(300);}}
                 </p>
                   </p>
                     <div class="text-center">
-                        <a href="{{route('blog')}}" class="filled-button">Read More</a>
+                        <a href="{{route('blog')}}" class="filled-button"
+                        style="margin-top: 20px">Read More</a>
                     </div>
                 </article>
 
@@ -243,13 +248,14 @@ Community Engagement: Joint initiatives promote community involvement and awaren
 Get Involved!
 Wondering how you can contribute? Keep an eye out for upcoming events, workshops, and initiatives brought to you by EcoCare and our partners. Your participation can make a real difference in our collective journey towards a greener future.";
                   @endphp
-                  
+
                   <p>
                     {{-- {{ str_limit($str, 50) }} --}}
                     {{Str::of($str)->limit(300);}}
                   </p>
                   <div class="text-center">
-                    <a href="{{route('blog')}}" class="filled-button">Read More</a>
+                    <a href="{{route('blog')}}" class="filled-button"
+                    style="margin-top: 20px">Read More</a>
                   </div>
                 </article>
 
@@ -264,13 +270,14 @@ According to Kwaku Afriyie, Ghana's Ministry of Environment, Science, Technology
 
 The centre “aims to reduce the environmental impact of e-waste recycling activities in the country, ensure the transition of e-waste through proper and sound procedures, test a pricing or financing mechanism,” says Minister Kwaku Afriyie. The centre is a result of the Electronic and Hazardous Waste Control and Management Act passed in 2016 in Ghana. The initiative also aims to create at least 22,000 jobs for Ghana’s youth.";
                     @endphp
-                    
+
                     <p>
                       {{-- {{ str_limit($str, 50) }} --}}
                       {{Str::of($str)->limit(300);}}
                     </p>
                     <div class="text-center">
-                      <a href="{{route('blog')}}" class="filled-button">Read More</a>
+                      <a href="{{route('blog')}}" class="filled-button"
+                      style="margin-top: 20px">Read More</a>
                     </div>
                   </article>
 
@@ -278,8 +285,8 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
               </section>
             </div>
           </div>
-  
-          
+
+
         </div>
       </div>
 
@@ -296,9 +303,9 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
 
 
 
-  
+
     <div class='hstack justify-content-center gap-5 mt-2' >
-  
+
         @for ($i = 0; $i <2; $i++)
 
         @php
@@ -309,7 +316,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
             <img src="https://ewastemonitor.info/wp-content/uploads/2023/03/2050_E-Waste_Asian_Outlook_Web_title.jpg">
             <div class="card__content">
               <p class="card__title">UNEP-UNITAR 2050 Electronic and Electrical Waste Outlook in West Asia</p>
-              <p class="card__description"> 
+              <p class="card__description">
                 {{Str::of($str)->limit(300);}}
                 <div class="text-center">
                     <a href="{{route('resources')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
@@ -320,7 +327,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
         @endfor
 
         @for ($i = 0; $i <2; $i++)
-        
+
         @php
             $str = "The Regional E-waste Monitor for Latin-America 2022, results for the 13 countries participating in project UNIDO-GEF 5554 provides an assessment of statistics, legislation, and management infrastructure of e-waste and persistent organic pollutants in Argentina, Bolivia, Chile, Costa Rica, Ecuador, El Salvador, Guatemala, Honduras, Nicaragua, Panama, Peru Uruguay and Venezuela. E-waste generation in the region increased by 49 percent, from 0.9 Mt (4.7 kg/inh) in 2010 to 1.3 Mt (6.7 kg/inh) in 2019. Since 2010, e-waste plastic generation containing persistent organic pollutants has increased 63 per cent – to 0.38 Mt in 2019.";
         @endphp
@@ -329,7 +336,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
             <img src="https://ewastemonitor.info/wp-content/uploads/2022/01/REM_LATAM_2022_ENG_Final-Titel-723x1024.png">
             <div class="card__content">
               <p class="card__title">The Regional E-waste Monitor for Latin America 2022</p>
-              <p class="card__description"> 
+              <p class="card__description">
                 {{Str::of($str)->limit(300);}}
                 <div class="text-center">
                     <a href="{{route('resources')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
@@ -339,9 +346,9 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
           </div>
         @endfor
 
-        
+
     </div>
-    
+
 </div>
 
 
@@ -382,7 +389,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
 
 
 
-    <script language = "text/Javascript"> 
+    <script language = "text/Javascript">
         cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
         function clearField(t){                   //declaring the array outside of the
             if(! cleared[t.id]){                      // function makes it static and global
@@ -406,7 +413,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
         });
     </script>
 
-    
+
     <script>
         var typed = new Typed('.txt2', {
         strings: ["START HERE !!","TOWARD FUTURE !!",'A WASTE-FREE WORLD!!',"RIGHT AT YOUR SERVICE "],
