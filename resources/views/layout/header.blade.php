@@ -56,11 +56,11 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" style="font-size: 16px;font-weight:bold" href="#">&#128172;Community</a>
+              <a class="nav-link" style="font-size: 16px;font-weight:bold" href="{{route('community')}}">&#128172;Community</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" style="font-size: 16px;font-weight:bold" href="{{route('resources')}}">&#127804;Features</a>
+              <a class="nav-link" style="font-size: 16px;font-weight:bold" href="{{route('features')}}">&#127804;Features</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" style="font-size: 16px;font-weight:bold" href="{{ route('about')}}">&#127774;About Us</a>

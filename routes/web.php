@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResourceController;
@@ -70,13 +71,17 @@ Route::get('profile/{id}', [ProfileController::class, 'profile'])->name('profile
 
 
 
-
-
-Route::get('/resources', [FeatureController::class, 'feature'])->name('resources')->middleware('c.auth');
+Route::get('/features', [FeatureController::class, 'feature'])->name('features')->middleware('c.auth');
 Route::get('{user}/feature/create', [FeatureController::class, 'create'])->name('feature.create')->middleware('c.auth');
 Route::post('/{user}/feature-store', [FeatureController::class, 'store'])->name('feature.store')->middleware('c.auth');
 Route::get('/feature-details/{slug}', [FeatureController::class, 'details'])->name('feature.details')->middleware('c.auth');
 
+
+
+
+//community
+Route::get('/community', [CommunityController::class, 'community'])->name('community')->middleware('c.auth');
+Route::get('/community/{user}/create-thread/', [CommunityController::class, 'create_thread'])->name('community.create_thread')->middleware('c.auth');
 
 
 

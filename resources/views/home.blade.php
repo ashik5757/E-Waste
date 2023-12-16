@@ -319,7 +319,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
               <p class="card__description">
                 {{Str::of($str)->limit(300);}}
                 <div class="text-center">
-                    <a href="{{route('resources')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
+                    <a href="{{route('features')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
                 </div>
               </p>
             </div>
@@ -339,7 +339,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
               <p class="card__description">
                 {{Str::of($str)->limit(300);}}
                 <div class="text-center">
-                    <a href="{{route('resources')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
+                    <a href="{{route('features')}}" class="filled-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Read More</a>
                 </div>
               </p>
             </div>
