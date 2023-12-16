@@ -22,7 +22,7 @@
             <span class="txt mt-3">You can see the creative the World, crafting through several wastes product to many usefull items </span>
             <h3 class="mt-3">You can post your creative crafting here!!</h3>
 
-            <a href="{{route('feature.create', ['slug'=>Str::slug('Card title')])}}">
+            <a href="{{route('feature.create', ['user'=>Auth::User()->id])}}">
                 <input style="margin-top: 100px" type="button" value="Add Feature" class="button_uv1">
             </a>
         </div>

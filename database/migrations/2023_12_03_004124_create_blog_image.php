@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('blog_id');
             $table->string('image');
             $table->string('size');
+            $table->string('mime');
             $table->timestamps();
 
 

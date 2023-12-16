@@ -34,7 +34,7 @@
 
                 <div class="form-container">
 
-                    <form class="form" action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
+                    <form class="form" action="{{route('feature.store', ['user'=>Auth::User()->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
                     <div class="form-group">
                         <label for="title" class="form-label">Feature Title</label><br>
