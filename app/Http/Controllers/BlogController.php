@@ -37,6 +37,8 @@ class BlogController extends Controller
 
     public function details(Request $request, $slug) {
 
+        // dd($request);
+
         $id = $request->query('id');
         $blog = Blog::find($id);
 

@@ -170,119 +170,47 @@
         <div class="container">
           <div class="row" id="tabs">
             <div class="col-md-4">
+
+
               <ul>
-                <li><a href='#tabs-1'>The ship breaking industry is the biggest producer of e-waste <br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-                <li><a href='#tabs-2'>The Complete Guide to E-Waste Sources and What You Can Do About It <br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-                <li><a href='#tabs-3'>Latest partnerships in the quest for sustainable waste management solutions <br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-                <li><a href='#tabs-4'>How technology transforming the landscape of waste management<br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
+                @foreach ($recentposts as $post)
+                    <li><a href='#tabs-{{ $loop->iteration }}'>{{ $post->title }} <br> <small>#{{ $post->user->username }} &nbsp;|&nbsp; {{ $post->created_at->format('d.m.Y H:i') }}</small></a></li>
+                @endforeach
               </ul>
-
+            
               <br>
-
 
               <br>
             </div>
 
             <div class="col-md-8">
+
               <section class='tabs-content'>
-                <article id='tabs-1'>
-                  <img src="https://ecdn.dhakatribune.net/contents/cache/images/1200x630x1xxxxx1x694528/uploads/dten/2022/03/10/whatsapp-image-2021-10-13-at-9-28-39-pm-1634204706845.jpeg?watermark=media%2F2023%2F05%2F28%2F1280px-Dhaka_Tribune_Logo.svg-1-a9e61c86dded62d74300fef48fee558f.png" alt="">
-                  <h4><a href="blog-details.html">Rising e-waste: A looming threat</a></h4>
-                  @php
-                      $str = "As Bangladesh goes through a tech revolution with growing focus on the ICT sector, there looms the danger of improperly treated e-waste, which is projected to rise exponentially and become a potential threat to the environment and those handling the wastes.
-According to a 2018 Department of Environment (DoE) projection, e-wastes are increasing at a rate of 20% every year and by 2035 the total amount is likely to add up to around 4.62 million tons.";
-                  @endphp
+                @foreach ($recentposts as $blog)
+                    <article id='tabs-{{ $loop->iteration }}'>
 
-                  <p>
-                    {{-- {{ str_limit($str, 50) }} --}}
-                    {{Str::of($str)->limit(300);}}
-                  </p>
-                  <div class="text-center">
-                    <a href="{{route('blog')}}" class="filled-button" style="margin-top: 20px">Read More</a>
-                  </div>
-                </article>
-                <article id='tabs-2'>
-                  <img src="https://greentekreman.com/wp-content/uploads/2021/11/The-Complete-Guide-to-E-Waste-Sources.png" alt="">
-                  <h4><a href="blog-details.html">E-Waste Sources - Where does all the Electronic Garbage End Up?</a></h4>
-                  <p>
-                    @php
-                    $str = "E-waste is a major problem, and unfortunately, e-waste sources are something we use daily. The United States is one of the most significant contributors to it, and they generate about 3.3 million tons of electronic waste every year.
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                              @foreach ($blog->blog_image as $key => $image)
+                              <div class="carousel-item @if ($key === 0) active @endif">
+                                  <img src="{{asset('storage/'.$image->image)}}" class="rounded" alt="blog_images"  style="width: 700px; height: 350px; margin-top: 10px;">
+                              </div>
+                              @endforeach
+                          </div>
+                        </div>
 
-We all know that we throw our old phones, TVs, and other gadgets in the trash or recycle bin, but where do they go from there?
-
-The answer - most likely to a landfill or an incinerator.
-
-It is estimated that this amount of e-waste could fill up a football field six times over. This will only increase as the need for electronics continues to grow, which means more e-waste will be generated as well.";
-                @endphp
-
-                <p>
-                  {{-- {{ str_limit($str, 50) }} --}}
-                  {{Str::of($str)->limit(300);}}
-                </p>
-                  </p>
-                    <div class="text-center">
-                        <a href="{{route('blog')}}" class="filled-button"
-                        style="margin-top: 20px">Read More</a>
-                    </div>
-                </article>
-
-                <article id='tabs-3'>
-                  <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/UO/PU/WN/43703651/e-waste-management-services.jpg" alt="">
-                  <h4><a href="blog-details.html">EcoCare Partnerships: Uniting for Sustainable Waste Solutions</a></h4>
-                  @php
-                      $str = "Hello, EcoCare community!
-
-Today, we're thrilled to share some exciting news about our latest partnerships in the quest for sustainable waste management solutions. At EcoCare, we believe that collaboration is key to creating a lasting impact on our environment.
-
-New Partnerships, New Possibilities
-We're proud to announce our collaboration with [Partner Organization], a local initiative dedicated to [specific sustainability goal]. Together, we aim to [describe the joint initiative and its goals].
-
-Community Spotlight: [Local Business]
-This month, we shine the spotlight on [Local Business], a trailblazer in sustainable practices. From implementing eco-friendly packaging to promoting recycling in their operations, [Local Business] is setting a stellar example for businesses in our community.
-
-How Partnerships Enhance Our Impact
-
-Increased Outreach: Collaborating with local organizations expands our reach and engages a broader audience.
-Innovation in Action: Partnering with businesses fosters innovation in sustainable waste solutions.
-Community Engagement: Joint initiatives promote community involvement and awareness.
-Get Involved!
-Wondering how you can contribute? Keep an eye out for upcoming events, workshops, and initiatives brought to you by EcoCare and our partners. Your participation can make a real difference in our collective journey towards a greener future.";
-                  @endphp
-
-                  <p>
-                    {{-- {{ str_limit($str, 50) }} --}}
-                    {{Str::of($str)->limit(300);}}
-                  </p>
-                  <div class="text-center">
-                    <a href="{{route('blog')}}" class="filled-button"
-                    style="margin-top: 20px">Read More</a>
-                  </div>
-                </article>
-
-
-                <article id='tabs-4'>
-                    <img src="https://courses.planetizen.com/sites/default/files/course_primary/E-Waste%20Waste%20Management%20Urban%20Planning%20Urban%20Design%20Courses%20Sewer%20Systems.png" alt="">
-                    <h4><a href="blog-details.html">E-Waste: A Growing Concern in Waste Management</a></h4>
-                    @php
-                        $str = "The Ghanaian government will inaugurate a new e-waste recycling centre in Accra on 31 October. The facility, built on a one-hectare site, will have a temporary storage area, a recycling unit, a weighbridge, a guardhouse and a transformer. These facilities will allow for the recovery and resale of four types of e-waste, including cables, mixed batteries, thermoplastics and CRTs.
-
-According to Kwaku Afriyie, Ghana's Ministry of Environment, Science, Technology and Innovation (MESTI), the work launched in October 2018 is 65% complete. The plant built by Memphis Metropolitan is funded to the tune of €10 million (over 84 million Ghanaian cedis) with support from the German government.
-
-The centre “aims to reduce the environmental impact of e-waste recycling activities in the country, ensure the transition of e-waste through proper and sound procedures, test a pricing or financing mechanism,” says Minister Kwaku Afriyie. The centre is a result of the Electronic and Hazardous Waste Control and Management Act passed in 2016 in Ghana. The initiative also aims to create at least 22,000 jobs for Ghana’s youth.";
-                    @endphp
-
-                    <p>
-                      {{-- {{ str_limit($str, 50) }} --}}
-                      {{Str::of($str)->limit(300);}}
-                    </p>
-                    <div class="text-center">
-                      <a href="{{route('blog')}}" class="filled-button"
-                      style="margin-top: 20px">Read More</a>
-                    </div>
-                  </article>
-
-
+                        <h4><a href="{{route('blog.details', ['id'=>$blog->id, 'slug'=>Str::slug($blog->title)])}}">{{ $blog->title }}</a></h4>
+                        <p>
+                            {{ Str::of($blog->description)->limit(300) }}
+                        </p>
+                        <div class="text-center">
+                            <a href="{{route('blog.details', ['id'=>$blog->id, 'slug'=>Str::slug($blog->title)])}}" class="filled-button" style="margin-top: 20px">Read More</a>
+                        </div>
+                    </article>
+                @endforeach
               </section>
+
+
             </div>
           </div>
 
@@ -377,7 +305,7 @@ The centre “aims to reduce the environmental impact of e-waste recycling activ
                 <p>
                     It's a movement towards a greener, more sustainable future. Join us in making a positive impact on the environment. Together, let's build a world where waste is managed responsibly, and our planet thrives.
                 </p>
-                <a href="about.html" class="filled-button">Read More</a>
+                <a href="{{route('about')}}" class="filled-button">Read More</a>
               </div>
             </div>
           </div>
