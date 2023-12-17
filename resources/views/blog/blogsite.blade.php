@@ -44,7 +44,7 @@
 
                     <div class="col" style="margin-bottom: 70px">
 
-                        <div class="card" style="width: 1100px;background:#eee;">
+                        <div class="card" style="width: 1000px; height:auto; background:#eee;">
                             <a style="width: 800px;" href="{{route('blog.details', ['id'=>$blog->id, 'slug'=>Str::slug($blog->title)])}}" >
 
                                 <div class="row align-items-start">
@@ -53,7 +53,7 @@
                                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-inner">
                                                 @foreach ($blog->blog_image as $key => $image)
-                                                <div class="carousel-item @if ($key === 0) active @endif">
+                                                <div class="carousel-item @if ($key === 0) active @endif" style="margin-top: 50px">
                                                     <img src="{{asset('storage/'.$image->image)}}" class="rounded" alt="blog_images"  style="height: 180px; margin-top: 10px;">
                                                 </div>
                                                 @endforeach
