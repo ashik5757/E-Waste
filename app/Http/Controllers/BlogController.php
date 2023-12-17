@@ -141,13 +141,11 @@ class BlogController extends Controller
         catch (\Exception $e) {
             return redirect()->back()->with('error', 'Something went wrong');
         }
-
-
-
-
-        
+ 
 
     }
+
+
 
 
     public function delete($id) {
@@ -189,7 +187,7 @@ class BlogController extends Controller
     }
 
 
-    public function delete_image($blog_id, $imgid) {
+    public function delete_image(Request $request, $blog_id, $imgid) {
 
         $blog = Blog::find($blog_id);
         $image = Blog_Image::find($imgid);

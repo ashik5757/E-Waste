@@ -1,0 +1,132 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px
+}
+
+
+
+.delete_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none; /* Added to remove default link underline */
+  }
+  
+  .delete_button .svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+  }
+  
+  .delete_button .svgIcon path {
+    fill: white;
+  }
+  
+  .delete_button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+  }
+  
+  .delete_button:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+  }
+  
+  .delete_button::before {
+    position: absolute;
+    top: -20px;
+    content: "Delete";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+    opacity: 0; /* Changed to start with opacity 0 */
+  }
+  
+  .delete_button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+  }
+  
+
+
+
+
+  /* ---------------------------------------------------------------------------------------------------------- */
+
+
+  .update_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none; /* Added to remove default link underline */
+}
+
+.update_button .svgIcon {
+    width: 24px;
+    transition-duration: .3s;
+}
+
+.update_button .svgIcon path {
+    fill: white;
+}
+
+.update_button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(69, 144, 255); /* Change the color for update_button */
+    align-items: center;
+}
+
+.update_button:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+}
+
+.update_button::before {
+    position: absolute;
+    top: -20px;
+    content: "Update Now";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+    opacity: 0;
+    stroke: black;
+}
+
+.update_button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}

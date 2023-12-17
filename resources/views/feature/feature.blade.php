@@ -18,11 +18,11 @@
 
     <div class="container home-con">
         <div class="half1" style="margin-bottom: -60px">
-            <h3 style="color: rgb(47,155,92);font-size: 60px;">Excusive Features Here</h3>
+            <h3 style="color: rgb(47,155,92);font-size: 60px;">Exclusive Features Here</h3>
             <span class="txt mt-3">You can see the creative the World, crafting through several wastes product to many usefull items </span>
             <h3 class="mt-3">You can post your creative crafting here!!</h3>
 
-            <a href="{{route('feature.create', ['user'=>Auth::User()->id])}}">
+            <a href="{{route('feature.create', ['user'=>Auth::User()->username])}}">
                 <input style="margin-top: 100px" type="button" value="Add Feature" class="button_uv1">
             </a>
         </div>
@@ -38,24 +38,59 @@
 
     <div class="row justify-content-around" style="width: 1600px;margin-left:26%;margin-bottom:70px">
 
-        @for ($i = 0; $i < 7; $i++)
+
+        @foreach ($features as $feature)
+            
+        <div class="text-center border rounded" style="margin-top:70px; width: 450px;">
+
+            <h5 class="card-title" style="margin-top:20px">{{$feature->title}}</h5>
 
 
-            <div class="text-center border rounded" style="margin-top:70px; width: 450px;">
+            @php
+                $thumbnailPath = public_path('storage/'.$feature->thumbnail);
+                $defaultImagePath = '/assets/images/No_thumbnail_2.jpg';
+            @endphp
 
-                <h5 class="card-title" style="margin-top:20px">A Small Earthen Pots</h5>
+            @if(file_exists($thumbnailPath))
+                <img src="{{ asset('storage/'.$feature->thumbnail) }}" class="img-fluid rounded-start" alt="Feature Image" style="width: 390px; height: 250px">
+            @else
+                <img src="{{ asset($defaultImagePath) }}" class="img-fluid rounded-start" alt="Default Image" style="width: 390px; height: 250px">
+            @endif
 
-                <img src="/assets/images/crft.jpg" class="img-fluid rounded-start" alt="..." style="width: 390px; height:250px" >
-                <p class="card-text">I made a wall hanging using waste material are - Lorem, ipsum dolor.</p>
-                <a href="{{route('feature.details', ['slug'=>Str::slug('Card title')])}}" class="btn btn-primary">Watch now</a>
+            {{-- <img src="{{asset('storage/'.$feature->thumbnail)}}" class="img-fluid rounded-start" alt="" style="width: 390px; height:250px" > --}}
+            <p class="card-text">{{$feature->description}}</p>
+            <a href="{{route('feature.details', ['id'=>$feature->id, 'slug'=>Str::slug($feature->title)])}}" class="btn btn-primary">Watch now</a>
 
-                <p class=" text-muted">
-                Created 2 days ago
-                </p>
-            </div>
+            
 
+            <p class=" text-muted">
+                {{-- <small>Created at {{ $feature->created_at->format('h:i A | d F, Y') }}</small> --}}
+            
+                @php
+                    $min = $feature->created_at->diffInMinutes(now());
+                    $hour = floor($min/60);
+                    $day = floor($hour/24);
+                @endphp
+            
+                
+                <small class="text-body-secondary">Created at 
+                    
+                    @if ($day>0)
+                        {{ $day }} {{ Str::plural('day', $day) }}     
+                    @elseif($hour>0)
+                        {{ $hour }} {{ Str::plural('hour', $hour) }}
+                    @else
+                        {{ $min }} {{ Str::plural('mins', $min) }}
+                    @endif
+        
+                    ago
+        
+                </small>
+            
+            </p>
+        </div>
+        @endforeach
 
-      @endfor
 
 
     </div>
