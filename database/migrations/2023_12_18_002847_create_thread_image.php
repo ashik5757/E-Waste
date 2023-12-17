@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('threads', function (Blueprint $table) {
+        Schema::create('thread_image', function (Blueprint $table) {
             $table->id();
-            $table->text('question');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('thread_id');
+            $table->string('image');
+            $table->string('size');
+            $table->string('mime');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
+            $table->foreign('thread_id')->references('id')->on('threads')->onDelete('cascade');
         });
     }
 
@@ -27,6 +28,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('threads');
+        Schema::dropIfExists('thread_image');
     }
 };
+
+

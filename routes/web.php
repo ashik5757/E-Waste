@@ -81,7 +81,7 @@ Route::get('/feature-details/{slug}', [FeatureController::class, 'details'])->na
 
 //community
 Route::get('/community', [CommunityController::class, 'community'])->name('community')->middleware('c.auth');
-Route::get('/community/{user}/create-thread/', [CommunityController::class, 'create_thread'])->name('community.create_thread')->middleware('c.auth');
-
+Route::get('/community/{user}/create-thread/', [CommunityController::class, 'create'])->name('community.create')->middleware('c.auth');
+Route::post('/community/{user}/thread-store', [CommunityController::class, 'store'])->name('thread.store')->middleware('c.auth');
 
 
