@@ -19,7 +19,7 @@ class BlogController extends Controller
 
     public function blogsite() {
 
-        $blogs = Blog::all();
+        $blogs = Blog::orderBy('created_at', 'desc')->get();
 
         return view('blog.blogsite', compact('blogs'));
 

@@ -36,12 +36,12 @@
 
 <div class="container" style="margin-left: 10px">
 
-    <div class="row justify-content-around" style="width: 1600px;margin-left:26%;margin-bottom:70px">
+    <div class="row" style="width: 1600px;margin-left:26%;margin-bottom:70px">
 
 
         @foreach ($features as $feature)
             
-        <div class="text-center border rounded" style="margin-top:70px; width: 450px;">
+        <div class="text-center border rounded" style="margin:20px; margin-top:70px; width: 450px;">
 
             <h5 class="card-title" style="margin-top:20px">{{$feature->title}}</h5>
 
@@ -59,7 +59,7 @@
 
             {{-- <img src="{{asset('storage/'.$feature->thumbnail)}}" class="img-fluid rounded-start" alt="" style="width: 390px; height:250px" > --}}
             <p class="card-text">{{$feature->description}}</p>
-            <a href="{{route('feature.details', ['id'=>$feature->id, 'slug'=>Str::slug($feature->title)])}}" class="btn btn-primary">Watch now</a>
+            <a href="{{route('feature.details', ['id'=>$feature->id, 'slug'=>Str::slug($feature->title)])}}" class="btn btn-info" style="background-color: rgb(47,155,92); width: 390px;" > Watch now </a>
 
             
 
