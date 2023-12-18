@@ -96,7 +96,6 @@ class BlogController extends Controller
             }
         }
 
-
         return redirect()->route('blog')->with('success', 'Your Post have been posted');
 
     }

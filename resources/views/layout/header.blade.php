@@ -56,7 +56,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" style="font-size: 16px;font-weight:bold" href="{{route('community')}}">&#128172;Community</a>
+              <a class="nav-link" style="font-size: 16px;font-weight:bold" href="{{route('community.index')}}">&#128172;Community</a>
             </li>
 
             <li class="nav-item">
