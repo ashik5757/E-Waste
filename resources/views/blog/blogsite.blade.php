@@ -64,7 +64,7 @@
 
                     <div class="col" style="margin-bottom: 70px">
 
-                        <div class="card" style="width: 1000px; height:auto; background:#eee;">
+                        <div class="card" style="width: 1000px; height:fit-content;background:#eee; padding:40px">
                             <a style="width: 800px;" href="{{route('blog.details', ['id'=>$blog->id, 'slug'=>Str::slug($blog->title)])}}" >
 
                                 <div class="row align-items-start">

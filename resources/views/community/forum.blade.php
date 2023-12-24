@@ -40,13 +40,18 @@
 
                     <div class="col" style="margin-bottom: 70px">
 
-                        <div class="card" style="width: 1100px;background:#eee;">
-                            <a style="width: 800px;" href="{{route('thread.details', ['id'=>$thread->id])}}" >
+                        <div class="card" style="width: 800px; height:fit-content;background:#eee; padding:40px">
+                            <a style="width: 600px;" href="{{route('thread.details', ['id'=>$thread->id])}}" >
 
                                 <div class="row align-items-start">
                                     
                                     <div class="col-md-8">
+                                        <div class="card-head">
+                                            <h3>#{{$thread->user->username}}</h3>
+                                            <p class="card-subtitle"><small class="text-body-secondary">Created at {{ $thread->created_at->format('h:i A | d F, Y') }}</small></p>
+                                        </div>
                                         <div class="card-body">
+                                        
                                         <p class="card-text">{{$thread->question}}</p>
                                         
                                         <p class="card-text"><small class="text-body-secondary">Last Updated {{ $thread->updated_at->diffInMinutes(now()) }} mins ago</small></p>

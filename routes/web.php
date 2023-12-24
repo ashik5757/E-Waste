@@ -120,8 +120,12 @@ Route::get('/feature-update/{user}/{slug}/', [FeatureController::class, 'edit'])
 Route::get('/community', [CommunityController::class, 'index'])->name('community.index')->middleware('c.auth');
 Route::get('/community/{user}/create-thread/', [CommunityController::class, 'create'])->name('community.create')->middleware('c.auth');
 Route::post('/community', [CommunityController::class, 'store'])->name('community.store')->middleware('c.auth');
-Route::get('/thread-details/', [CommunityController::class, 'details'])->name('thread.details')->middleware('c.auth');
+Route::get('/community/thread-details/', [CommunityController::class, 'details'])->name('thread.details')->middleware('c.auth');
 Route::post('/community/{thread}/answer', [CommunityController::class, 'addAnswer'])->name('community.addAnswer')->middleware('c.auth');
+
+Route::get('/community-thread/{thread_id}/', [CommunityController::class, 'edit'])->name('thread.edit')->middleware('c.auth');
+Route::post('/thread-update/{id}', [CommunityController::class, 'update'])->name('thread.update')->middleware('c.auth');
+Route::get('/thread-delete/{id}', [CommunityController::class, 'delete'])->name('thread.delete')->middleware('c.auth');
 
 
 

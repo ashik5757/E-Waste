@@ -5,14 +5,14 @@ use App\Models\Thread;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Models\User;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 
 class CommunityController extends Controller
 {
     public function index()
     {
-        $threads = Thread::all();
+        $threads = Thread::orderBy('created_at', 'desc')->get();
         return view('community.forum', compact('threads'));
     }
 
@@ -66,4 +66,96 @@ class CommunityController extends Controller
 
         return redirect()->route('thread.details', $thread);
     }
+
+
+
+
+    public function edit(Request $request, $thread_id) {
+
+        // dd($request);
+    
+        // $id = $request->query('thread_id');
+        $thread = Thread::find($thread_id);
+    
+        // dd($blog);
+        
+        return view('community.edit', compact('thread'));
+    }
+    
+    
+    
+    public function update(Request $request, $id) {
+            
+        // dd($request);
+    
+        try {
+    
+            $thread = Thread::find($id);
+    
+            // dd($request);
+    
+            $thread->update([
+                'user_id' => Auth::user()->id,
+                'question' => $request->question,
+            ]);
+    
+
+            return redirect()->route('community.index')->with('success', 'Your Question have been Updated');
+    
+        } 
+        
+        catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
+    
+    }
+    
+    
+
+
+
+
+
+
+
+        
+    public function delete($id) {
+
+        // dd($id);
+
+        $thread = Thread::find($id);
+
+
+        try {
+            if($thread) {
+
+                $answers = $thread->answers;
+
+                foreach ($answers as $answer) {
+                    $answer->delete();
+                }
+                
+                $thread->answers()->delete();
+                $thread->delete();
+            }
+            else{
+                return redirect()->route('community.index')->with('error', 'Feature Post not found');
+            }
+    
+        }
+
+        catch(\Exception $e) {
+            return redirect()->route('community.index')->with('error', 'Something went wrong');
+        }
+
+
+        return redirect()->route('community.index')->with('success', 'Thread has been deleted');
+
+    }
+        
+    
+    
+
+
 }
+

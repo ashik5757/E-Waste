@@ -35,17 +35,17 @@
 
     <div class="form-container">
 
-        <form id="postForm" action="{{ route('community.store') }}" method="post">
+        <form id="postForm" action="{{ route('thread.update', ['id'=>$thread->id])}}) }}" method="post">
             @csrf
             <div class="mb-3">
                 <label for="question" class="form-label">Question</label>
-                <textarea class="form-control" id="question" name="question" rows="3" required></textarea>
+                <textarea class="form-control" id="question" name="question" rows="3" required>{{$thread->question}}</textarea>
                 <div class="invalid-feedback">
                         This field is required.
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-xs pl-3 pe-3" style="background:rgb(47,155,92);color:white">Ask Question</button>
+            <button type="submit" class="btn btn-xs pl-3 pe-3" style="background:rgb(47,155,92);color:white">Update Question</button>
         </form>
     </div>
 

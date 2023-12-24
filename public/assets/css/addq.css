@@ -1,0 +1,28 @@
+label, input, textarea,select, span{
+    max-width: 700px;
+}
+label{
+   font-weight: bold;
+   font-size: 18px;
+   margin-left: 5px;
+
+}
+
+#image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.preview-container {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.preview-image {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+

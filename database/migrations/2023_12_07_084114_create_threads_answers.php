@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('threads_answers', function (Blueprint $table) {
             $table->id();
-            $table->string('answer');
+            $table->text('answer');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('thread_id');
             $table->timestamps();
