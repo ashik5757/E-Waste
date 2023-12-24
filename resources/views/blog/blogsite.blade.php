@@ -26,8 +26,12 @@
             <a href="{{route('blog.create', ['user'=>Auth::User()->username])}}">
                 <input style="margin-top: 100px" type="button" value="Create Now" class="button_uv1">
             </a>
+
         </div>
     </div>
+
+
+
 
 
 
@@ -36,7 +40,23 @@
 
 
 <div class="container" >
-    <div class="row justify-content-evenly"  >
+    <div class="row justify-content-evenly">
+
+{{-- 
+        <div style="margin-left: auto; font-size: 22px;">
+            <form action="" method="get">
+                <label for="category">Category:</label>
+                <select name="category" id="category">
+                    <option value="blog">Blog</option>
+                    <option value="product">Product</option>
+                    <option value="resource">Resource</option>
+                </select>
+            
+                <button class="button_uv1" type="submit" style="width:100px; font-size: 12px; padding: 8px 12px;">Filter</button>
+            </form>
+        </div>
+
+        <br><br> --}}
 
 
 
@@ -44,7 +64,7 @@
 
                     <div class="col" style="margin-bottom: 70px">
 
-                        <div class="card" style="width: 1100px;background:#eee;">
+                        <div class="card" style="width: 1000px; height:auto; background:#eee;">
                             <a style="width: 800px;" href="{{route('blog.details', ['id'=>$blog->id, 'slug'=>Str::slug($blog->title)])}}" >
 
                                 <div class="row align-items-start">
@@ -53,7 +73,7 @@
                                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-inner">
                                                 @foreach ($blog->blog_image as $key => $image)
-                                                <div class="carousel-item @if ($key === 0) active @endif">
+                                                <div class="carousel-item @if ($key === 0) active @endif" style="margin-top: 50px">
                                                     <img src="{{asset('storage/'.$image->image)}}" class="rounded" alt="blog_images"  style="height: 180px; margin-top: 10px;">
                                                 </div>
                                                 @endforeach

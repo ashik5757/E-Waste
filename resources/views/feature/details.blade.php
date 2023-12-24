@@ -7,7 +7,7 @@
 
 
 @section('more_link')
-    <link rel="stylesheet" href="{{ asset('assets/css/blog_details.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/feature_details.css') }}">
 @endsection
 
 
@@ -28,17 +28,53 @@
 </div>
 
 <div class="container text-center" >
-    <div class="text-left p-3" style="width: 1000px ;background:#eeeeee67; margin-left:5%">
-        <h1> <span style="color: rgb(47,155,92); ">Feature Title:</span> Lorem ipsum dolor sit amet consectetur adipisicing.</h1><br>
-        <h4><span style="color: rgb(47,155,92); ">Subtitle:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-        <h4><span style="color: rgb(47,155,92); ">Author:</span> Lorem, ipsum dolor.</h4>
-        <h4><span style="color: rgb(47,155,92); ">Published date:</span></h4>
-        <h4><span style="color: rgb(47,155,92); ">Category:</span> Crafting</h4>
-    </div>
-    <br><br>
-    <iframe width="1000" height="600" src="https://www.youtube.com/embed/d4Tg0CKQ6yw?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br> <br>
 
-    <div class="accordion" id="accordionExample" style="margin-bottom: 30px">
+    <br>
+
+    <h2> {{$feature->title}} </h2>
+    <h6>#{{$username}}<small class="text-body-secondary" style="margin-left:10px">Created at {{ $feature->created_at->format('h:i A | d F, Y') }}</small></h6>
+    <h6><small class="text-body-secondary"><b>Category : {{ $feature->category}}</b></small></h6>
+
+    @if (Auth::User()->id == $feature->user_id)
+    <div class="button-container">
+      <a class="update_button" href="{{route('feature.edit', ['user'=>Auth::User()->username, 'feature_id'=>$feature->id, 'slug'=>Str::slug($feature->title)])}}">
+        <svg id="Layer_1" class="svgIcon" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M19.607,18.746c0,0.881-0.716,1.624-1.597,1.624H5.231c-0.881,0-1.597-0.743-1.597-1.624V5.967c0-0.881,0.716-1.571,1.597-1.571h7.454V3.332H5.231c-1.468,0-2.662,1.168-2.662,2.636v12.778c0,1.468,1.194,2.688,2.662,2.688h12.778c1.468,0,2.662-1.221,2.662-2.688v-7.428h-1.065V18.746z" stroke-width="2" />
+          <path d="M20.807,3.17c-0.804-0.805-2.207-0.805-3.012,0l-7.143,7.143c-0.068,0.068-0.117,0.154-0.14,0.247L9.76,13.571c-0.045,0.181,0.008,0.373,0.14,0.506c0.101,0.101,0.237,0.156,0.376,0.156c0.043,0,0.086-0.005,0.129-0.016l3.012-0.753c0.094-0.023,0.179-0.072,0.247-0.14l7.143-7.143c0.402-0.402,0.624-0.937,0.624-1.506S21.21,3.572,20.807,3.17z M13.016,12.467l-2.008,0.502l0.502-2.008l5.909-5.909l1.506,1.506L13.016,12.467z M20.054,5.428l-0.376,0.376l-1.506-1.506l0.376-0.376c0.402-0.402,1.104-0.402,1.506,0c0.201,0.201,0.312,0.468,0.312,0.753C20.366,4.96,20.255,5.227,20.054,5.428z" stroke-width="2" />
+        </svg>            
+      </a>
+    
+      <a href="#" onclick="confirmDelete({{ $feature->id }})" class="delete_button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svgIcon">
+            <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path>
+        </svg>
+      </a>
+    </div>
+    @endif
+
+    <br>
+
+    <div class="card-body" style="background:#d6ecdec2;margin-top: 20px; border-radius: 10px;">
+      <b class="card-title">Description</b>
+      <p class="card-text">{{$feature->description}}</p>
+    </div>
+
+
+
+
+
+
+    <br><br>
+
+    @foreach ($feature->feature_videos as $video)
+      <iframe width="1000" height="600" src="{{asset('storage/'.$video->video)}}" title="{{$feature->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br> <br>
+    @endforeach
+
+
+
+
+
+    {{-- <div class="accordion" id="accordionExample" style="margin-bottom: 30px">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -75,17 +111,29 @@
             </div>
           </div>
         </div>
-      </div>
+    </div> --}}
 
-</div>
 
-<div class="container" style="background:#eee;margin-bottom: 70px">
-    <h3>Description:</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui incidunt autem beatae nisi esse, voluptatum voluptas quos quas voluptatibus cumque consectetur odio quae, repudiandae facere quidem nulla quia vero distinctio veniam dolores ratione! Dolorum assumenda eos itaque numquam sequi, quasi voluptas et eveniet doloremque ipsa temporibus asperiores officia sapiente earum! Repellat id culpa corporis nesciunt vitae cum fuga in impedit eum, accusamus maxime commodi quidem nihil, asperiores distinctio veritatis. Consequuntur, neque quam blanditiis praesentium inventore cumque maiores eos! Consequatur accusantium accusamus soluta repudiandae voluptatum sint magnam repellat mollitia, minus doloribus officiis aspernatur labore, eos commodi corporis maxime, aliquam laborum sit modi eligendi voluptas. Officia omnis quas, accusamus quaerat dolor autem expedita libero sit suscipit eos temporibus odio laboriosam? Mollitia quam reiciendis impedit nulla tempora molestias dolores nobis placeat maxime natus laudantium possimus, eum harum optio delectus odio unde rem rerum id deserunt ab! Earum perferendis dolorum tempore dicta necessitatibus impedit sed molestias fuga laudantium eos obcaecati ut vel dolorem tempora labore corporis architecto, vero ex voluptates. Quod cupiditate dicta corrupti suscipit? Modi minima repellat deleniti nesciunt eligendi reprehenderit reiciendis quis laborum, quam, voluptatum recusandae sunt placeat quas ad aliquid eos autem? Dolores facere, quas tempora ex error iure alias aliquid animi recusandae amet illo est iusto impedit hic officia! Odio, voluptas maiores adipisci sapiente cum repudiandae quae perferendis suscipit aspernatur saepe sit culpa fuga quidem natus pariatur molestiae voluptatum enim necessitatibus voluptate. Ipsum recusandae assumenda porro neque, minima fugit sint perferendis voluptas repellat voluptate dignissimos nesciunt? Ipsa ex excepturi repellat, natus magni saepe aliquam corporis, atque aperiam praesentium dolorum aspernatur modi sed ab nemo perspiciatis adipisci debitis. Perferendis omnis, architecto quam rem sed nulla, distinctio enim aut iure reiciendis, corporis ab at error? Magni quia nisi soluta quae unde eligendi perferendis aliquid officiis itaque, alias perspiciatis repellendus iste similique numquam ad molestiae maiores reiciendis hic, molestias beatae nihil veritatis animi quasi. Cupiditate earum alias expedita asperiores libero pariatur, tempore id adipisci distinctio unde dolorem quod explicabo nisi reprehenderit esse sed ipsam, hic rerum vitae, saepe obcaecati perferendis at dolorum suscipit? Exercitationem architecto iste sapiente est dolorum harum laborum aut cum! Lorem, ipsum dolor.0 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni labore laudantium unde, fugit quo in sunt quidem magnam tempore vitae possimus sed consectetur nobis hic alias eos tenetur fugiat voluptatibus.
-    </p>
+
+
+    <div class="card-body" style="background:#d3f5df9d;margin-bottom: 70px; border-radius: 10px;">
+      <h2 class="card-title">Details</h2>
+      <p class="card-text" style="margin-top: 30px">{!! nl2br($feature->details) !!}</p>
     </div>
 
+      
+</div>
 
+
+
+
+<script>
+  function confirmDelete(featureid) {
+      if (confirm("Are you sure you want to delete this blog post?")) {
+          window.location.href = "{{ route('feature.delete', ['id' => ':id']) }}".replace(':id', featureid);
+      }
+  }
+</script>
 
 
 

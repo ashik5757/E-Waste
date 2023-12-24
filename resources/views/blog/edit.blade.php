@@ -123,7 +123,8 @@
                 deleteButton.type = 'button';
                 deleteButton.className = 'delete-button';
                 deleteButton.textContent = 'Delete';
-                deleteButton.onclick = deleteImage();
+                // deleteButton.onclick = deleteImage();
+                deleteButton.onclick = function() { deleteImage('{{$blog->id}}', '{{ $image->id }}'); };
 
                 var previewContainerDiv = document.createElement('div');
                 previewContainerDiv.className = 'preview-container';

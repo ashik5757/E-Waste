@@ -8,6 +8,24 @@ label{
 
 }
 
+#video-preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.preview-container {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.preview-video {
+    max-width: 400px;
+    max-height: 400px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
 #image-preview {
     display: flex;
     flex-wrap: wrap;
@@ -21,8 +39,8 @@ label{
 }
 
 .preview-image {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 400px;
+    max-height: 400px;
     border: 1px solid #ddd;
     margin-bottom: 5px;
 }

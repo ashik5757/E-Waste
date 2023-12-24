@@ -85,7 +85,7 @@
                 @endif --}}
 
                 <img src="/assets/images/pp.png" style="width:30px;height:30px"  alt="profile pic">
-                <a class="nav-link" style="font-size: 14px;font-weight:bold" href="{{route('profile', ['id'=>Auth::User()->id])}}">#{{Auth::User()->username}}</a>
+                <a class="nav-link" style="font-size: 14px;font-weight:bold;text-transform: lowercase;" href="{{route('profile', ['user'=>Auth::User()->username])}}">#{{Auth::User()->username}}</a>
               </li>
 
               <li class="nav-item">

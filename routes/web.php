@@ -6,6 +6,7 @@ use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResourceController;
+use App\Models\Blog;
 use Illuminate\Auth\AuthManager;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +23,30 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('home');
+
+    $totalPosts = Blog::count();
+    $recentposts = null;
+    
+
+    if ($totalPosts>=4) {
+        $recentposts = Blog::latest()->take(4)->get();
+    }
+    elseif ($totalPosts>=3) {
+        $recentposts = Blog::latest()->take(3)->get();
+    }
+    elseif ($totalPosts>=2) {
+        $recentposts = Blog::latest()->take(2)->get();
+    }
+    elseif ($totalPosts>=1) {
+        $recentposts = Blog::latest()->take(1)->get();
+    }
+    else {
+        $recentposts = Blog::latest()->take(0)->get();
+    }
+
+
+    return view('home', compact('recentposts'));
+
 })->name('home');
 
 
@@ -65,16 +89,28 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Profile
 
-Route::get('profile/{id}', [ProfileController::class, 'profile'])->name('profile')->middleware('c.auth');
+Route::get('profile/{user}', [ProfileController::class, 'profile'])->name('profile')->middleware('c.auth');
+Route::post('profile-update/{user}', [ProfileController::class, 'update'])->name('profile.update')->middleware('c.auth');
+
 
 
 
 
 
 Route::get('/features', [FeatureController::class, 'feature'])->name('features')->middleware('c.auth');
-Route::get('{user}/feature/create', [FeatureController::class, 'create'])->name('feature.create')->middleware('c.auth');
+
+Route::get('{user}/feature-create', [FeatureController::class, 'create'])->name('feature.create')->middleware('c.auth');
 Route::post('/{user}/feature-store', [FeatureController::class, 'store'])->name('feature.store')->middleware('c.auth');
+
+Route::post('/feature-update/{id}', [FeatureController::class, 'update'])->name('feature.update')->middleware('c.auth');
+Route::get('/feature-delete/{id}', [FeatureController::class, 'delete'])->name('feature.delete')->middleware('c.auth');
+Route::get('/feature-delete-video/{feature_id}/{videoid}', [FeatureController::class, 'delete_video'])->name('feature.delete_video')->middleware('c.auth');
+Route::get('/feature-delete-thumbnail/{feature_id}/', [FeatureController::class, 'delete_thumbnail'])->name('feature.delete_thumbnail')->middleware('c.auth');
+
+
+
 Route::get('/feature-details/{slug}', [FeatureController::class, 'details'])->name('feature.details')->middleware('c.auth');
+Route::get('/feature-update/{user}/{slug}/', [FeatureController::class, 'edit'])->name('feature.edit')->middleware('c.auth');
 
 
 

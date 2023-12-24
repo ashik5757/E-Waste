@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('resources_videos', function (Blueprint $table) {
+        Schema::create('features_videos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('resource_id');
+            $table->unsignedBigInteger('feature_id');
             $table->string('video');
             $table->string('size');
+            $table->string('mime');
             $table->timestamps();
 
 
-            $table->foreign('resource_id')->references('id')->on('resources')->onDelete('cascade');
+            $table->foreign('feature_id')->references('id')->on('features')->onDelete('cascade');
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('resources_videos');
+        Schema::dropIfExists('features_videos');
     }
 };
