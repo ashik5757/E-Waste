@@ -116,8 +116,13 @@ Route::get('/feature-update/{user}/{slug}/', [FeatureController::class, 'edit'])
 
 
 //community
-Route::get('/community', [CommunityController::class, 'community'])->name('community')->middleware('c.auth');
-Route::get('/community/{user}/create-thread/', [CommunityController::class, 'create_thread'])->name('community.create_thread')->middleware('c.auth');
+
+Route::get('/community', [CommunityController::class, 'index'])->name('community.index')->middleware('c.auth');
+Route::get('/community/{user}/create-thread/', [CommunityController::class, 'create'])->name('community.create')->middleware('c.auth');
+Route::post('/community', [CommunityController::class, 'store'])->name('community.store')->middleware('c.auth');
+Route::get('/thread-details/', [CommunityController::class, 'details'])->name('thread.details')->middleware('c.auth');
+Route::post('/community/{thread}/answer', [CommunityController::class, 'addAnswer'])->name('community.addAnswer')->middleware('c.auth');
+
 
 
 
