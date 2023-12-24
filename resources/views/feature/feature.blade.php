@@ -52,13 +52,13 @@
             @endphp
 
             @if(file_exists($thumbnailPath))
-                <img src="{{ asset('storage/'.$feature->thumbnail) }}" class="img-fluid rounded-start" alt="Feature Image" style="width: 390px; height: 250px">
+                <img src="{{ asset('storage/'.$feature->thumbnail) }}" class="img-fluid rounded-start" alt="Feature Image" style="width: 390px; height: 210px">
             @else
-                <img src="{{ asset($defaultImagePath) }}" class="img-fluid rounded-start" alt="Default Image" style="width: 390px; height: 250px">
+                <img src="{{ asset($defaultImagePath) }}" class="img-fluid rounded-start" alt="Default Image" style="width: 390px; height: 210px">
             @endif
 
             {{-- <img src="{{asset('storage/'.$feature->thumbnail)}}" class="img-fluid rounded-start" alt="" style="width: 390px; height:250px" > --}}
-            <p class="card-text">{{$feature->description}}</p>
+            <p class="card-text" style="width: 390px; text-align: left; margin:20px;">{{$feature->description}}</p>
             <a href="{{route('feature.details', ['id'=>$feature->id, 'slug'=>Str::slug($feature->title)])}}" class="btn btn-info" style="background-color: rgb(47,155,92); width: 390px;" > Watch now </a>
 
             

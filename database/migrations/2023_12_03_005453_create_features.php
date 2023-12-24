@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('features', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
-            $table->string('details');
+            $table->text('description');
+            $table->longText('details');
             $table->string('category');
             $table->string('thumbnail');
             $table->unsignedBigInteger('user_id');

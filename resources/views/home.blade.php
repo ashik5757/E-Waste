@@ -154,6 +154,7 @@
 <div style="  background: linear-gradient(to bottom, #dffbf0 30%, #ffffff 93%); padding-bottom: 150px; padding-top:100px" class="bg-secondary-subtle" id="news_list" >
 
 
+
     <div class="d-flex justify-content-center">
         <div class="mt-5 m-4 ">
             <h1 class="fw-bold">Our Recent Blog Post</h1>

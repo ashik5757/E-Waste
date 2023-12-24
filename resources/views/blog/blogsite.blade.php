@@ -26,8 +26,12 @@
             <a href="{{route('blog.create', ['user'=>Auth::User()->username])}}">
                 <input style="margin-top: 100px" type="button" value="Create Now" class="button_uv1">
             </a>
+
         </div>
     </div>
+
+
+
 
 
 
@@ -36,7 +40,23 @@
 
 
 <div class="container" >
-    <div class="row justify-content-evenly"  >
+    <div class="row justify-content-evenly">
+
+{{-- 
+        <div style="margin-left: auto; font-size: 22px;">
+            <form action="" method="get">
+                <label for="category">Category:</label>
+                <select name="category" id="category">
+                    <option value="blog">Blog</option>
+                    <option value="product">Product</option>
+                    <option value="resource">Resource</option>
+                </select>
+            
+                <button class="button_uv1" type="submit" style="width:100px; font-size: 12px; padding: 8px 12px;">Filter</button>
+            </form>
+        </div>
+
+        <br><br> --}}
 
 
 
